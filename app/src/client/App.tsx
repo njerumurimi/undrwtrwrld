@@ -5,7 +5,8 @@ import './Main.css';
 import NavBar from './components/NavBar/NavBar';
 import { demoNavigationitems, marketingNavigationItems } from './components/NavBar/constants';
 import CookieConsentBanner from './components/cookie-consent/Banner';
-
+import { UserDashboardLayout } from './user-dashboard';
+import { AdminDashboardLayout } from './admin-dashboard';
 /**
  * use this component to wrap all child components
  * this is useful for templates, themes, and context
@@ -28,6 +29,10 @@ export default function App() {
     return location.pathname.startsWith('/admin');
   }, [location]);
 
+  const isUserDashboard = useMemo(() => {
+    return location.pathname.startsWith('/my-dashboard');
+  }, [location]);
+
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace('#', '');
@@ -42,7 +47,9 @@ export default function App() {
     <>
       <div className='min-h-screen bg-background text-foreground'>
         {isAdminDashboard ? (
-          <Outlet />
+          <AdminDashboardLayout />
+        ) : isUserDashboard ? (
+          <UserDashboardLayout />
         ) : (
           <>
             {shouldDisplayAppNavBar && <NavBar navigationItems={navigationItems} />}
