@@ -4,7 +4,7 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { DataTableFacetedFilter } from './faceted-filter'
 import { DataTableViewOptions } from './view-options'
-import * as React from 'react'
+import React from 'react'
 
 type DataTableToolbarProps<TData> = {
   table: Table<TData>

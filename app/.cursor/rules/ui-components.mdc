@@ -17,7 +17,7 @@ npx shadcn@2.3.0 add button
 
 There will be a brand new `button.tsx` file in `src/components/ui`. We need to fix some import issues:
 ```diff
-import * as React from "react"
+import React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 

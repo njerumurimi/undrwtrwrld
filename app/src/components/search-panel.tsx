@@ -25,7 +25,7 @@ import { Separator } from "./ui/separator"
 import { CheckIcon } from "./icons/check"
 import { SearchIcon } from "./icons/search"
 import { SelectorIcon } from "./icons/selector"
-import * as React from "react"
+import React from "react"
 
 import { cn, constructUrlWithParams } from "../lib/utils"
 

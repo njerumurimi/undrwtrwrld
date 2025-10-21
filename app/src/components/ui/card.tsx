@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import { cva, VariantProps } from 'class-variance-authority';
 import { cn } from '../../lib/utils';
@@ -14,7 +14,7 @@ const cardVariants = cva('rounded-xl border shadow hover:shadow-lg transition-al
   },
 });
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof cardVariants> {}
+interface CardProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof cardVariants> { }
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant = 'default', ...props }, ref) => (

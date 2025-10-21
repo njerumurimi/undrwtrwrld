@@ -135,6 +135,12 @@ page AccountPage {
   component: import Account from "@src/user/AccountPage"
 }
 
+route UserDashboardRoute { path: "/my-dashboard", to: UserDashboardPage }
+page UserDashboardPage {
+  authRequired: true,
+  component: import UserDashboardPage from "@src/user/dashboards/UserDashboardPage"
+}
+
 query getPaginatedUsers {
   fn: import { getPaginatedUsers } from "@src/user/operations",
   entities: [User]
@@ -143,44 +149,6 @@ query getPaginatedUsers {
 action updateIsUserAdminById {
   fn: import { updateIsUserAdminById } from "@src/user/operations",
   entities: [User]
-}
-//#endregion
-
-//#region Demo AI App
-route DemoAppRoute { path: "/demo-app", to: DemoAppPage }
-page DemoAppPage {
-  authRequired: true,
-  component: import DemoAppPage from "@src/demo-ai-app/DemoAppPage"
-}
-
-action generateGptResponse {
-  fn: import { generateGptResponse } from "@src/demo-ai-app/operations",
-  entities: [User, Task, GptResponse]
-}
-
-action createTask {
-  fn: import { createTask } from "@src/demo-ai-app/operations",
-  entities: [Task]
-}
-
-action deleteTask {
-  fn: import { deleteTask } from "@src/demo-ai-app/operations",
-  entities: [Task]
-}
-
-action updateTask {
-  fn: import { updateTask } from "@src/demo-ai-app/operations",
-  entities: [Task]
-}
-
-query getGptResponses {
-  fn: import { getGptResponses } from "@src/demo-ai-app/operations",
-  entities: [User, GptResponse]
-}
-
-query getAllTasksByUser {
-  fn: import { getAllTasksByUser } from "@src/demo-ai-app/operations",
-  entities: [Task]
 }
 //#endregion
 
@@ -274,21 +242,15 @@ page AdminUsersPage {
   component: import AdminUsers from "@src/admin/dashboards/users/UsersDashboardPage"
 }
 
-route AdminSettingsRoute { path: "/admin/settings", to: AdminSettingsPage }
-page AdminSettingsPage {
-  authRequired: true,
-  component: import AdminSettings from "@src/admin/elements/settings/SettingsPage"
-}
-
-route AdminCalendarRoute { path: "/admin/calendar", to: AdminCalendarPage }
-page AdminCalendarPage {
-  authRequired: true,
-  component: import AdminCalendar from "@src/admin/elements/calendar/CalendarPage"
-}
-
 route NotFoundRoute { path: "*", to: NotFoundPage }
 page NotFoundPage {
   component: import { NotFoundPage } from "@src/client/components/NotFoundPage"
+}
+
+route AdminDashboardRoute { path: "/admin-dashboard", to: AdminDashboardPage }
+page AdminDashboardPage {
+  authRequired: true,
+  component: import AdminDashboardPage from "@src/admin/dashboards/AdminDashboardPage"
 }
 //#endregion
 

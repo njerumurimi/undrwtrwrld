@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { cn } from '../../lib/utils'
 import { Button } from '../../components/ui/button'
-import * as React from 'react'
+import React from 'react'
 
 type GeneralErrorProps = React.HTMLAttributes<HTMLDivElement> & {
   minimal?: boolean

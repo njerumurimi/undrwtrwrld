@@ -8,7 +8,7 @@ import {
 } from '../../components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs'
 import { ConfigDrawer } from '../components/config-drawer'
-import { Header } from '../layout/header'
+import { Header } from '../layout/dashboard-header'
 import { Main } from '../layout/main'
 import { TopNav } from '../layout/top-nav'
 import { ProfileDropdown } from '../components/profile-dropdown'
@@ -19,7 +19,7 @@ import { Overview } from './components/overview'
 import { RecentSales } from './components/recent-sales'
 import { type AuthUser } from 'wasp/auth';
 
-export function DashboardPage({ user }: { user: AuthUser }) {
+export default function UserDashboardPage({ user }: { user: AuthUser }) {
 
   return (
     <>

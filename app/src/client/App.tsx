@@ -26,7 +26,7 @@ export default function App() {
   }, [location]);
 
   const isAdminDashboard = useMemo(() => {
-    return location.pathname.startsWith('/admin');
+    return location.pathname.startsWith('/admin-dashboard');
   }, [location]);
 
   const isUserDashboard = useMemo(() => {

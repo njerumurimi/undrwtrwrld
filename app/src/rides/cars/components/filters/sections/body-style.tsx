@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react"
-import * as React from "react"
+import React from "react"
 import { Toggle } from "../../../../../components/ui/toggle"
 import { CarIcon } from "../../../../../components/icons/car"
 import { HatchbackIcon } from "../../../../../components/icons/hatchback"

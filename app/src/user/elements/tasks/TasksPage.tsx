@@ -1,5 +1,5 @@
 import { ConfigDrawer } from '../../components/config-drawer'
-import { Header } from '../../layout/header'
+import { Header } from '../../layout/dashboard-header'
 import { Main } from '../../layout/main'
 import { ProfileDropdown } from '../../components/profile-dropdown'
 import { Search } from '../../components/search'

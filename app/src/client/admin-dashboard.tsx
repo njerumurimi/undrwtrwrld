@@ -6,7 +6,7 @@ import { SearchProvider } from '../admin/context/search-provider'
 import { SidebarInset, SidebarProvider } from '../admin/components/ui/sidebar'
 import { AppSidebar } from '../admin/layout/app-sidebar'
 import { SkipToMain } from '../admin/components/skip-to-main'
-import * as React from 'react'
+import React from 'react'
 
 type AuthenticatedLayoutProps = {
   children?: React.ReactNode

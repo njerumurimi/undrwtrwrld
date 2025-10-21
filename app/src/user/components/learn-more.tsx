@@ -7,7 +7,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from './ui/popover'
-import * as React from 'react'
+import React from 'react'
 
 type LearnMoreProps = React.ComponentProps<typeof Root> & {
   contentProps?: React.ComponentProps<typeof Content>

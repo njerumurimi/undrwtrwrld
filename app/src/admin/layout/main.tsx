@@ -1,5 +1,5 @@
 import { cn } from '../lib/utils'
-import * as React from 'react'
+import React from 'react'
 
 type MainProps = React.HTMLAttributes<HTMLElement> & {
   fixed?: boolean

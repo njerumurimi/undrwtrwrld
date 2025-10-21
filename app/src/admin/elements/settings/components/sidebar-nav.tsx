@@ -10,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '../../../components/ui/select'
-import * as React from 'react'
+import React from 'react'
 
 type SidebarNavProps = React.HTMLAttributes<HTMLElement> & {
   items: {

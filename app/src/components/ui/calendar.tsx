@@ -1,6 +1,6 @@
 "use client"
 
-import * as React from "react"
+import React from "react"
 import { DayPicker } from "react-day-picker"
 
 import { cn } from "../../lib/utils"
@@ -54,14 +54,19 @@ function Calendar({
                 day_hidden: "invisible",
                 ...classNames,
             }}
-            components={{
-                IconLeft: ({ ...props }) => (
-                    <ChevronLeftIcon className="size-4 shrink-0" />
-                ),
-                IconRight: ({ ...props }) => (
-                    <ChevronRightIcon className="size-4 shrink-0" />
-                ),
-            }}
+            components={
+                // Cast to `any` because the installed react-day-picker types
+                // may not include IconLeft/IconRight keys depending on version.
+                // This keeps the JSX icons while avoiding a TS type mismatch.
+                ({
+                    IconLeft: ({ ...props }: any) => (
+                        <ChevronLeftIcon className="size-4 shrink-0" />
+                    ),
+                    IconRight: ({ ...props }: any) => (
+                        <ChevronRightIcon className="size-4 shrink-0" />
+                    ),
+                } as unknown) as any
+            }
             {...props}
         />
     )

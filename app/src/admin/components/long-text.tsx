@@ -11,7 +11,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from './ui/tooltip'
-import * as React from 'react'
+import React from 'react'
 
 type LongTextProps = {
   children: React.ReactNode

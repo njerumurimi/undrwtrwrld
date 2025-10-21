@@ -2,7 +2,7 @@
 
 import { useNavigate, useLocation } from 'react-router-dom'
 import { VariantProps } from "class-variance-authority"
-import * as React from "react"
+import React from "react"
 import { Button, buttonVariants } from "../../../components/ui/button"
 
 // interface BackButtonProps extends VariantProps<typeof buttonVariants> {

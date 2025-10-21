@@ -10,7 +10,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '../ui/tooltip'
-import * as React from 'react'
+import React from 'react'
 
 type DataTableBulkActionsProps<TData> = {
   table: Table<TData>

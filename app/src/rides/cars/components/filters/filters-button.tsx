@@ -14,7 +14,7 @@ import { Badge } from "../../../../components/ui/badge"
 import { Button } from "../../../../components/ui/button"
 import { FiltersIcon } from "../../../../components/icons/filters"
 import { ResponsiveModal } from "../../../../components/responsive-modal"
-import * as React from "react"
+import React from "react"
 import { FiltersContent } from "./filters-content"
 import {
     applyFiltersToParams,
